@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립순천대학교 메인</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        /* Hide scrollbar for the icon carousel to keep it clean */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen overflow-x-hidden pt-12 pb-24">
+
+    <!-- Right Floating Menu -->
+    <aside class="fixed right-0 top-1/3 w-20 bg-white border-l border-t border-b border-gray-300 z-50 shadow-sm flex flex-col">
+        <!-- Popup Menu Item -->
+        <button class="relative flex flex-col items-center justify-center py-4 border-b border-gray-200 hover:bg-gray-50 transition">
+            <div class="relative mb-1">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">22</span>
+            </div>
+            <span class="text-[11px] font-bold">POPUP</span>
+        </button>
+        <!-- User Menu Item -->
+        <button class="flex flex-col items-center justify-center py-4 border-b border-gray-200 hover:bg-gray-50 transition">
+            <svg class="w-6 h-6 text-gray-700 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            <span class="text-[11px] font-bold">사용자메뉴</span>
+        </button>
+        <!-- Related Organizations Item -->
+        <button class="flex flex-col items-center justify-center py-4 hover:bg-gray-50 transition">
+            <svg class="w-6 h-6 text-gray-700 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            <span class="text-[11px] font-bold">관련기관</span>
+        </button>
+    </aside>
+
+    <!-- Main Container -->
+    <div class="max-w-[1300px] mx-auto px-4 lg:px-8">
+        
+        <!-- 1. Top Icon Carousel Section -->
+        <section class="mb-20">
+            <div class="flex items-center justify-between group">
+                <!-- Left Arrow -->
+                <button class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition shrink-0 z-10">
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+
+                <!-- Icons Container -->
+                <div class="flex-1 overflow-x-auto no-scrollbar mx-4">
+                    <div class="flex justify-between items-start min-w-[1000px] px-4">
+                        
+                        <!-- Icon Items (Mocking the exact ones from image) -->
+                        <!-- 향림통시스템 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=💻" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">향림통시스템</span>
+                        </div>
+                        
+                        <!-- 인터넷증명발급 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=🖥️" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">인터넷증명발급</span>
+                        </div>
+
+                        <!-- 진로취업지원포털 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=📝" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">진로취업지원포털</span>
+                        </div>
+
+                        <!-- 현장실습지원센터 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=🔄" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">현장실습지원센터</span>
+                        </div>
+
+                        <!-- e-캠퍼스 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=📍" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">e-캠퍼스</span>
+                        </div>
+
+                        <!-- 교원초빙시스템 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=👤" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">교원초빙시스템</span>
+                        </div>
+
+                        <!-- 시설물사용신청 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=🏢" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">시설물사용신청</span>
+                        </div>
+
+                        <!-- 웹메일 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=✉️" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">웹메일</span>
+                        </div>
+
+                        <!-- A/S 원격요청 -->
+                        <div class="flex flex-col items-center gap-3 cursor-pointer group/icon">
+                            <div class="w-[72px] h-[72px] rounded-2xl bg-[#f4f7fc] flex items-center justify-center group-hover/icon:-translate-y-1 transition-transform">
+                                <img src="https://placehold.co/40x40/f4f7fc/4b70db?text=🛠️" alt="icon" class="w-10 h-10 object-contain mix-blend-multiply">
+                            </div>
+                            <span class="text-sm font-medium text-gray-700">A/S 원격요청</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition shrink-0 z-10">
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Pagination Dots -->
+            <div class="flex justify-center items-center gap-1.5 mt-8">
+                <div class="w-6 h-1.5 bg-[#4568D2] rounded-full"></div>
+                <div class="w-1.5 h-1.5 bg-gray-300 rounded-full"></div>
+            </div>
+        </section>
+
+
+        <!-- 2. Main Content Split Area -->
+        <div class="flex flex-col lg:flex-row gap-10">
+            
+            <!-- Left: THE LATEST Section (Takes approx 60%) -->
+            <div class="lg:w-3/5 flex flex-col">
+                <!-- Header -->
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <h2 class="text-4xl font-black tracking-tight mb-2">
+                            <span class="text-gray-200 font-bold mr-1">#</span>THE LATEST
+                        </h2>
+                        <p class="text-sm text-gray-500">
+                            <strong class="text-black font-bold">NOTICE</strong> 국립순천대학교에서 전하는 주요 정보를 확인하세요.
+                        </p>
+                    </div>
+                    <!-- More Button -->
+                    <button class="flex items-center border border-gray-300 group hover:border-black transition">
+                        <span class="px-4 py-1.5 text-[13px] text-gray-600 bg-white">더보기</span>
+                        <span class="bg-black text-white px-2 py-1.5 text-sm flex items-center justify-center border-l border-black group-hover:bg-gray-800">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="flex gap-6 border-b border-gray-300 mb-8 relative">
+                    <button class="text-[15px] font-bold text-black border-b-2 border-black pb-3 -mb-[2px] z-10">의대유치</button>
+                    <button class="text-[15px] text-gray-500 hover:text-black pb-3 transition">공지사항</button>
+                    <button class="text-[15px] text-gray-500 hover:text-black pb-3 transition">학사</button>
+                    <button class="text-[15px] text-gray-500 hover:text-black pb-3 transition">장학</button>
+                </div>
+
+                <!-- News Grid (2 Columns x 3 Rows) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+                    
+                    <!-- Card 1 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            광주지방법원 결정에 대한 국립순천대학교 입장
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.10.06</p>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            국립의과대학 후보대학 선정 논란에 관한 국립순천대학교 입장
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.09.17</p>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            국립의과대학 신설 후보대학 선정에 대한 국립순천대학교 입장문
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.09.01</p>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            [보도자료] 국립순천대, 반려된 의과대학 신설 추진계획서 재제출
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.08.20</p>
+                    </a>
+
+                    <!-- Card 5 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            [보도자료] 국립순천대, 전남 동부권 의과대학 및 교육(부속)병원 설립 추진 계획서 전남광주통합특...
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.08.20</p>
+                    </a>
+
+                    <!-- Card 6 -->
+                    <a href="#" class="flex flex-col group">
+                        <span class="inline-block bg-gray-100 text-gray-600 text-[11px] font-medium px-3 py-1 rounded-full mb-3 w-max">의대유치</span>
+                        <h3 class="text-[15px] font-medium leading-snug text-gray-900 group-hover:underline mb-auto line-clamp-2 min-h-[44px]">
+                            [설명자료] 「'양보'와 '욕심'...'의대 골든타임' 정녕 놓치고 말 것인가」 보도는 사실과 다릅니다
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-6">2026.08.16</p>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Right: SCHEDULES Section (Takes approx 40%) -->
+            <div class="lg:w-2/5 flex flex-col">
+                
+                <!-- Header -->
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <h2 class="text-4xl font-black tracking-tight mb-2">
+                            <span class="text-gray-200 font-bold mr-1">#</span>SCHEDULES
+                        </h2>
+                        <p class="text-sm text-gray-500">
+                            <strong class="text-black font-bold">학사일정</strong> 이번 달 주요 학사일정을 확인하세요
+                        </p>
+                    </div>
+                    <!-- More Button -->
+                    <button class="flex items-center border border-gray-300 group hover:border-black transition">
+                        <span class="px-4 py-1.5 text-[13px] text-gray-600 bg-white">더보기</span>
+                        <span class="bg-black text-white px-2 py-1.5 text-sm flex items-center justify-center border-l border-black group-hover:bg-gray-800">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Blue Schedule Box -->
+                <!-- Adjusted margin top to align better with left side tabs baseline -->
+                <div class="bg-[#4568D2] text-white flex-1 flex flex-col pt-8 pb-4 mt-[34px]">
+                    
+                    <!-- Today Header -->
+                    <div class="px-8 flex justify-between items-center mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <h3 class="text-2xl font-bold">Today</h3>
+                            <span class="text-xl font-light opacity-90">2026.10.26</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="hover:text-gray-300 transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                            </button>
+                            <span class="w-[1px] h-4 bg-white/30 self-center"></span>
+                            <button class="hover:text-gray-300 transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2x2 Grid with inner borders only -->
+                    <!-- We use negative margins or specific border classes to mimic the cross lines -->
+                    <div class="mx-8 grid grid-cols-2 border-t border-white/20 flex-1">
+                        
+                        <!-- Cell 1 (Top Left) -->
+                        <div class="border-r border-b border-white/20 p-5 flex flex-col justify-center">
+                            <p class="text-[13px] font-medium opacity-90 mb-1">2026.10.19.~2026.10.23.</p>
+                            <p class="text-lg font-bold">제2학기 중간시험</p>
+                        </div>
+                        
+                        <!-- Cell 2 (Top Right) -->
+                        <div class="border-b border-white/20 p-5 flex flex-col justify-center pl-8">
+                            <p class="text-[13px] font-medium opacity-90 mb-1">2026.10.28.~2026.10.28.</p>
+                            <p class="text-lg font-bold">수업일수 2/4</p>
+                        </div>
+
+                        <!-- Cell 3 (Bottom Left) -->
+                        <div class="border-r border-white/20 p-5 flex flex-col justify-center">
+                            <p class="text-[13px] font-medium opacity-90 mb-1">2026.10.03.~2026.10.03.</p>
+                            <p class="text-lg font-bold">개천절</p>
+                        </div>
+
+                        <!-- Cell 4 (Bottom Right) -->
+                        <div class="p-5 flex flex-col justify-center pl-8">
+                            <p class="text-[13px] font-medium opacity-90 mb-1">2026.10.09.~2026.10.09.</p>
+                            <p class="text-lg font-bold">한글날</p>
+                        </div>
